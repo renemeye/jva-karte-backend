@@ -7,6 +7,7 @@
 # Author: Darth Kule
 # Author: Davalv
 # Author: Davio
+# Author: Devid Farinelli
 # Author: Dieterdreist
 # Author: Efred
 # Author: Frammm
@@ -26,6 +27,7 @@
 # Author: Raoli
 # Author: Ricordisamoa
 # Author: Rippitippi
+# Author: Ruila
 # Author: Shirayuki
 # Author: Simone
 # Author: SimoneSVC
@@ -803,7 +805,7 @@ it:
           spur: Diramazione ferroviaria breve
           station: Stazione ferroviaria
           stop: Fermata ferroviaria
-          subway: Stazione della metropolitana
+          subway: Metropolitana
           subway_entrance: Ingresso metropolitana
           switch: Punti ferroviari
           tram: Tramvia
@@ -1011,8 +1013,8 @@ it:
     legal_babble:
       title_html: Copyright e licenza
       intro_1_html: |-
-        OpenStreetMap è un <i>database aperto</i>, rilasciato in base alla licenza <a
-        href="http://opendatacommons.org/licenses/odbl/">Open Data Commons Open Database License</a> (ODbL).
+        OpenStreetMap è <i>open data</i>, e i suoi dati sono distribuiti con licenza <a
+        href="http://opendatacommons.org/licenses/odbl/">Open Data Commons Open Database License</a> (ODbL) dalla <a href="http://osmfoundation.org/">OpenStreetMap Foundation</a> (OSMF).
       intro_2_html: "Sei libero di copiare, distribuire, trasmettere e adattare i
         nostri dati, finché lo attribuisci a OpenStreetMap e ai suoi contributori.
         Se alteri o ti basi sui nostri dati,\npuoi distribuire il risultato solo sotto
@@ -1034,10 +1036,10 @@ it:
         alt: Esempio di come attribuire ad OpenStreetMap su una pagina web
         title: Esempio di attribuzione
       more_title_html: Per saperne di più
-      more_1_html: |-
-        Per saperne di più su come utilizzare i nostri dati, e come accreditarci, consulta
-        le <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ">Domande
-        legali frequenti</a>.
+      more_1_html: Per saperne di più su come utilizzare i nostri dati e come citarne
+        correttamente la fonte, consulta la pagina sulla <a href="http://osmfoundation.org/Licence">Licenza
+        OSMF</a> e le <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ">Domande
+        legali frequenti</a> della community.
       more_2_html: |-
         Anche se i dati OpenStreetMap sono aperti, non possiamo fornire accesso alle API della mappa gratuitamente per gli sviluppatori di terze parti.
         Vedi la nostra <a href="http://wiki.openstreetmap.org/wiki/API_usage_policy">Politica di utilizzo delle API</a>, la
@@ -1073,6 +1075,11 @@ it:
       contributors_nz_html: |-
         <strong>Nuova Zelanda</strong>: contiene i dati provenienti dalla
         Land Information New Zealand. Crown Copyright reserved.
+      contributors_si_html: |-
+        <strong>Slovenia</strong>: Contiene dati dell'
+        <a href="http://www.gu.gov.si/en/">Autorità per il Rilievo e la Mappatura</a> e del
+        <a href="http://www.mkgp.gov.si/en/">Ministero dell' Agricoltura, delle foreste e dell'alimentazione</a>
+        (informazioni pubbliche della Slovenia).
       contributors_za_html: |-
         <strong>Sud Africa</strong>: contiene i dati provenienti dalla
         <a href="http://www.ngi.gov.za/">Chief Directorate:
@@ -1168,11 +1175,34 @@ it:
       url: /welcome
       title: Benvenuti a OSM
       description: Inizia con questa guida rapida che copre le basi di OpenStreetMap.
+    beginners_guide:
+      url: http://wiki.openstreetmap.org/wiki/IT:Beginners%27_guide
+      title: Guida per Principianti
+      description: Guida per i principianti gestita dalla community.
     help:
       url: https://help.openstreetmap.org/
       title: help.openstreetmap.org
       description: Fai una domanda o cerca risposte sul sito di domande e risposte
         di OSM.
+    mailing_lists:
+      url: http://lists.openstreetmap.org/
+      title: Mailing List
+      description: Poni la tua domanda o discuti questioni di interesse su una vasta
+        gamma di mailing list tematiche o regionali.
+    forums:
+      url: http://forum.openstreetmap.org/
+      title: Forum
+      description: Domande e discussioni per coloro che preferiscono un'interfaccia
+        in stile bacheca (BBS).
+    irc:
+      url: http://irc.openstreetmap.org/
+      title: IRC
+      description: Chat interattiva in molte lingue diverse e su molti argomenti.
+    switch2osm:
+      url: https://switch2osm.org/
+      title: switch2osm
+      description: Aiuto per imprese e organizzazioni che intendono migrare a mappe
+        e altri servizi basati su OpenStreetMap.
     wiki:
       url: http://wiki.openstreetmap.org/
       title: wiki.openstreetmap.org
@@ -1202,6 +1232,12 @@ it:
       o sviluppi sulla base dei dati in un certo modo, puoi distribuire il risultato
       solo mediante la stessa licenza. Consultare la <a href=''%{copyright_path}''>pagina
       Copyright e Licenza</a> per i dettagli.'
+    legal_title: Note legali
+    legal_html: "Questo sito e molti altri servizi correlati sono formalmente gestiti
+      dalla \n<a href=\"http://osmfoundation.org/\">OpenStreetMap Foundation</a> (OSMF)
+      \nper conto della comunità.\n<br> \nSi prega di <a href=\"http://osmfoundation.org/Contact\">contattare
+      la OSMF</a> \nin caso di dubbi e problemi di licenza, copyright o altre questioni
+      legali."
     partners_title: Partner
   notifier:
     diary_comment_notification:
@@ -1748,6 +1784,7 @@ it:
       register now: Registrati ora
       with username: 'Possiedi già un profilo OpenStreetMap? Entra con il tuo nome
         utente e password:'
+      with external: In alternativa, effettua l'accesso tramite terze parti
       new to osm: Sei nuovo su OpenStreetMap?
       to make changes: Per apportare modifiche ai dati di OpenStreetMap, è necessario
         disporre di un account.
@@ -1761,6 +1798,22 @@ it:
         di attività sospette.<br />Se desideri discuterne, puoi contattare il <a href="%{webmaster}">webmaster</a>.
       auth failure: Spiacenti, non si può accedere con questi dettagli.
       openid_logo_alt: Accedi con un OpenID
+      auth_providers:
+        openid:
+          title: Accedi con OpenID
+          alt: Accedi con un URL OpenID
+        google:
+          title: Accedi con Google
+          alt: Accedi con un OpenID di Google
+        yahoo:
+          title: Accedi con Yahoo
+          alt: Accedi con un OpenID di Yahoo
+        wordpress:
+          title: Accedi con Wordpress
+          alt: Accedi con un OpenID di Wordpress
+        aol:
+          title: Accedi con AOL
+          alt: Accedi con un OpenID di AOL
     logout:
       title: Esci
       heading: Esci da OpenStreetMap
@@ -1809,8 +1862,23 @@ it:
       display name: 'Nome visualizzato:'
       display name description: Il proprio nome utente visualizzato pubblicamente.
         Può essere modificato più tardi nelle preferenze.
+      external auth: 'Autenticazione tramite terze parti:'
       password: 'Password:'
       confirm password: 'Conferma password:'
+      use external auth: In alternativa, effettua l'accesso tramite terze parti
+      auth no password: Con l'autenticazione tramite terze parti non è richiesta una
+        password, ma alcuni strumenti o server aggiuntivi potrebbero ancora averne
+        bisogno.
+      auth association: |-
+        <p>Il tuo ID non è ancora associato ad alcun profilo OpenStreetMap.</p>
+        <ul>
+          <li>Se sei nuovo in OpenStreetMap, crea un nuovo profilo utilizzando il form sottostante.</li>
+          <li>
+            Se possiedi già un profilo è possibile accedervi
+            utilizzando il proprio nome utente e password, e quindi associare il profilo
+            con il proprio ID all'interno delle impostazioni utente.
+          </li>
+        </ul>
       continue: Registrati
       terms accepted: Grazie di aver accettato le nuove regole per contribuire!
       terms declined: Siamo spiacenti che tu abbia deciso di non accettare i nuovi
@@ -1918,6 +1986,7 @@ it:
       current email address: 'Indirizzo e-mail attuale:'
       new email address: 'Nuovo indirizzo e-mail:'
       email never displayed publicly: (mai visualizzato pubblicamente)
+      external auth: 'Autenticazione Esterna:'
       openid:
         link: http://wiki.openstreetmap.org/wiki/IT:OpenID
         link text: che cos'è questo?
@@ -1997,8 +2066,9 @@ it:
       press confirm button: Premere sul pulsante di conferma sottostante per confermare
         il nuovo indirizzo email.
       button: Conferma
-      success: L'indirizzo email è stato confermato, grazie per l'iscrizione!
+      success: Confermato il cambio di indirizzo e-mail!
       failure: Un indirizzo email con questo codice è già stato confermato.
+      unknown_token: Questo codice di conferma è scaduto oppure non esiste.
     set_home:
       flash success: Posizione personale salvata con successo
     go_public:
@@ -2037,6 +2107,9 @@ it:
         a causa di \n  attività sospette. \n</p>\n<p>\n  Questa decisione sarà riesaminata
         a breve da un amministratore, oppure \n  se desideri discuterne puoi contattare
         il %{webmaster}.\n</p>"
+    auth_failure:
+      connection_failed: Connessione al provider di autenticazione non riuscita
+      invalid_credentials: Le credenziali di autenticazione non sono valide
   user_role:
     filter:
       not_an_administrator: Solo gli amministratori possono gestire i ruoli degli
@@ -2304,6 +2377,7 @@ it:
         destination: Raggiungi la destinazione
         against_oneway: Vai contro il senso unico in
         end_oneway: Fine del senso unico in
+        exit: uscita %{exit}
         unnamed: (senza nome)
         courtesy: Indicazioni per gentile concessione di %{link}
       time: Tempo
