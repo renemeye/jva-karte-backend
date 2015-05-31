@@ -102,3 +102,6 @@ group :development, :test do
   gem "poltergeist"
   gem "coveralls", :require => false
 end
+
+gem "letter_opener", :group => :development
+
