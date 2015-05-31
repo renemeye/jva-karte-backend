@@ -1,4 +1,5 @@
 source "https://rubygems.org"
+ruby "2.1.2"
 
 # Require rails
 gem "rails", "4.2.1"
@@ -105,3 +106,5 @@ end
 
 gem "letter_opener", :group => :development
 
+#Rails
+gem 'rails_12factor', group: :production
