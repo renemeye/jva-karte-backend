@@ -108,5 +108,6 @@ end
 
 gem "letter_opener", :group => :development
 
-#Rails
+#Heroku
 gem 'rails_12factor', group: :production
+gem 'postmark-rails'
