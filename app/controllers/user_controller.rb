@@ -515,7 +515,7 @@ class UserController < ApplicationController
       when "active", "confirmed" then
         successful_login(user)
       when "suspended" then
-        failed_login t("user.login.account is suspended", :webmaster => "mailto:webmaster@openstreetmap.org")
+        failed_login t("user.login.account is suspended", :webmaster => "mailto:mail@jva-karte.de")
       else
         failed_login t("user.login.auth failure")
       end
@@ -558,7 +558,7 @@ class UserController < ApplicationController
     elsif user = User.authenticate(:username => username, :password => password, :pending => true)
       unconfirmed_login(user)
     elsif User.authenticate(:username => username, :password => password, :suspended => true)
-      failed_login t("user.login.account is suspended", :webmaster => "mailto:webmaster@openstreetmap.org")
+      failed_login t("user.login.account is suspended", :webmaster => "mailto:mail@jva-karte.de")
     else
       failed_login t("user.login.auth failure")
     end

@@ -94,7 +94,7 @@ Rails has its own log.  To inspect the log, do this:
 tail -f log/development.log
 ```
 
-If you have more problems, please ask on the [rails-dev@openstreetmap.org mailing list](http://lists.openstreetmap.org/listinfo/rails-dev) or on the [#osm-dev IRC Channel](http://wiki.openstreetmap.org/wiki/IRC)
+If you have more problems, please ask on the [mail@jva-karte.de mailing list](http://lists.openstreetmap.org/listinfo/rails-dev) or on the [#osm-dev IRC Channel](http://wiki.openstreetmap.org/wiki/IRC)
 
 ## Maintaining your installation
 

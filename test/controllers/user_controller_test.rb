@@ -694,7 +694,7 @@ class UserControllerTest < ActionController::TestCase
     user = User.find(users(:inactive_user).id)
     assert_equal "active", user.status
     assert_equal true, user.email_valid
-    assert_equal user, User.authenticate(:username => "inactive@openstreetmap.org", :password => "new_password")
+    assert_equal user, User.authenticate(:username => "mail@jva-karte.de", :password => "new_password")
   end
 
   def test_account

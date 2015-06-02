@@ -1539,7 +1539,7 @@ EOF
     assert_response :not_found, "shouldn't be able to get changesets by non-public user (name)"
 
     # but this should work
-    basic_authorization "test@openstreetmap.org", "test"
+    basic_authorization "mail@jva-karte.de", "test"
     get :query, :user => users(:normal_user).id
     assert_response :success, "can't get changesets by user ID"
     assert_changesets [1, 3, 6, 8]
@@ -1999,7 +1999,7 @@ EOF
     email = ActionMailer::Base.deliveries.first
     assert_equal 1, email.to.length
     assert_equal "[OpenStreetMap] test2 has commented on one of your changesets", email.subject
-    assert_equal "test@openstreetmap.org", email.to.first
+    assert_equal "mail@jva-karte.de", email.to.first
 
     ActionMailer::Base.deliveries.clear
 
@@ -2012,7 +2012,7 @@ EOF
     end
     assert_response :success
 
-    email = ActionMailer::Base.deliveries.find { |e| e.to.first == "test@openstreetmap.org" }
+    email = ActionMailer::Base.deliveries.find { |e| e.to.first == "mail@jva-karte.de" }
     assert_not_nil email
     assert_equal 1, email.to.length
     assert_equal "[OpenStreetMap] pulibc_test2 has commented on one of your changesets", email.subject

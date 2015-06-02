@@ -1,7 +1,7 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 normal_user:
   id: 1
-  email: test@openstreetmap.org
+  email: mail@jva-karte.de
   status: active
   pass_crypt: <%= Digest::MD5.hexdigest('test') %>
   creation_time: "2007-01-01 00:00:00"
@@ -35,7 +35,7 @@ public_user:
 
 inactive_user:
   id: 3
-  email: inactive@openstreetmap.org
+  email: mail@jva-karte.de
   status: pending
   pass_crypt: <%= Digest::MD5::hexdigest('test2') %>
   creation_time: "2008-07-01 02:23:45"
@@ -52,8 +52,8 @@ inactive_user:
 
 second_public_user:
   id: 4
-  email: public@OpenStreetMap.org
-  new_email: new_public@OpenStreetMap.org
+  email: mail@jva-karte.de
+  new_email: new_mail@jva-karte.de
   status: active
   pass_crypt: <%= Digest::MD5.hexdigest('test') %>
   creation_time: "2008-05-01 01:23:45"
@@ -119,7 +119,7 @@ openid_user:
 
 uppercase_user:
   id: 9
-  email: TEST@OPENSTREETMAP.ORG
+  email: mail@jva-karte.de
   status: active
   pass_crypt: <%= Digest::MD5.hexdigest('test') %>
   creation_time: "2007-01-01 00:00:00"
@@ -132,7 +132,7 @@ uppercase_user:
 
 suspended_user:
   id: 10
-  email: suspended@openstreetmap.org
+  email: mail@jva-karte.de
   status: suspended
   pass_crypt: <%= Digest::MD5.hexdigest('test') %>
   creation_time: "2007-01-01 00:00:00"
@@ -145,7 +145,7 @@ suspended_user:
 
 deleted_user:
   id: 11
-  email: deleted@openstreetmap.org
+  email: mail@jva-karte.de
   status: deleted
   pass_crypt: <%= Digest::MD5.hexdigest('test') %>
   creation_time: "2007-01-01 00:00:00"
@@ -158,7 +158,7 @@ deleted_user:
 
 confirmed_user:
   id: 12
-  email: confirmed@openstreetmap.org
+  email: mail@jva-karte.de
   status: confirmed
   pass_crypt: <%= Digest::MD5.hexdigest('test') %>
   creation_time: "2007-01-01 00:00:00"
@@ -171,7 +171,7 @@ confirmed_user:
 
 blocked_user:
   id: 13
-  email: blocked@openstreetmap.org
+  email: mail@jva-karte.de
   status: active
   pass_crypt: <%= Digest::MD5.hexdigest('test') %>
   creation_time: "2007-01-01 00:00:00"
@@ -184,7 +184,7 @@ blocked_user:
 
 unblocked_user:
   id: 14
-  email: unblocked@openstreetmap.org
+  email: mail@jva-karte.de
   status: active
   pass_crypt: <%= Digest::MD5.hexdigest('test') %>
   creation_time: "2007-01-01 00:00:00"

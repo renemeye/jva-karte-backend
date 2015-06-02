@@ -47,7 +47,7 @@ class UserPreferenceControllerTest < ActionController::TestCase
     end
 
     # authenticate as a user with preferences
-    basic_authorization("test@openstreetmap.org", "test")
+    basic_authorization("mail@jva-karte.de", "test")
 
     # try the read again
     get :read
@@ -70,7 +70,7 @@ class UserPreferenceControllerTest < ActionController::TestCase
     assert_response :unauthorized, "should be authenticated"
 
     # authenticate as a user with preferences
-    basic_authorization("test@openstreetmap.org", "test")
+    basic_authorization("mail@jva-karte.de", "test")
 
     # try the read again
     get :read_one, :preference_key => "key"
@@ -99,7 +99,7 @@ class UserPreferenceControllerTest < ActionController::TestCase
     end
 
     # authenticate as a user with preferences
-    basic_authorization("test@openstreetmap.org", "test")
+    basic_authorization("mail@jva-karte.de", "test")
 
     # try the put again
     assert_no_difference "UserPreference.count" do
@@ -147,7 +147,7 @@ class UserPreferenceControllerTest < ActionController::TestCase
     end
 
     # authenticate as a user with preferences
-    basic_authorization("test@openstreetmap.org", "test")
+    basic_authorization("mail@jva-karte.de", "test")
 
     # try adding a new preference
     assert_difference "UserPreference.count", 1 do
@@ -181,7 +181,7 @@ class UserPreferenceControllerTest < ActionController::TestCase
     assert_equal "value", UserPreference.find([1, "key"]).v
 
     # authenticate as a user with preferences
-    basic_authorization("test@openstreetmap.org", "test")
+    basic_authorization("mail@jva-karte.de", "test")
 
     # try the delete again
     assert_difference "UserPreference.count", -1 do

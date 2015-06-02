@@ -11,7 +11,7 @@ class ExportController < ApplicationController
 
     if format == "osm"
       # redirect to API map get
-      redirect_to "http://api.openstreetmap.org/api/#{API_VERSION}/map?bbox=#{bbox}"
+      redirect_to "http://jva-karte.de/api/#{API_VERSION}/map?bbox=#{bbox}"
 
     elsif format == "mapnik"
       # redirect to a special 'export' cgi script

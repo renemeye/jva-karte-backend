@@ -464,7 +464,7 @@ class AmfControllerTest < ActionController::TestCase
     assert_equal -1, result[0]
     assert_match /must be logged in/, result[1]
 
-    amf_content "findgpx", "/1", [1, "blocked@openstreetmap.org:test"]
+    amf_content "findgpx", "/1", [1, "mail@jva-karte.de:test"]
     post :amf_read
     assert_response :success
     amf_parse_response
@@ -1288,7 +1288,7 @@ class AmfControllerTest < ActionController::TestCase
     assert_equal true, cs.is_open?
     assert_equal({ "comment" => "new", "source" => "new" }, cs.tags)
 
-    amf_content "startchangeset", "/1", ["test@openstreetmap.org:test", {}, cs_id, "delete", 0]
+    amf_content "startchangeset", "/1", ["mail@jva-karte.de:test", {}, cs_id, "delete", 0]
     post :amf_write
     assert_response :success
     amf_parse_response

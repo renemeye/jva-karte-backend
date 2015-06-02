@@ -34,7 +34,7 @@ class UserTest < ActiveSupport::TestCase
 
   def test_unique_display_name
     new_user = User.new(
-      :email => "tester@openstreetmap.org",
+      :email => "mail@jva-karte.de",
       :status => "pending",
       :pass_crypt => Digest::MD5.hexdigest("test"),
       :display_name => users(:normal_user).display_name,
@@ -47,7 +47,7 @@ class UserTest < ActiveSupport::TestCase
 
   def test_email_valid
     ok = %w(a@s.com test@shaunmcdonald.me.uk hello_local@ping-d.ng
-            test_local@openstreetmap.org test-local@example.com)
+            test_mail@jva-karte.de test-local@example.com)
     bad = %w(hi ht@ n@ @.com help@.me.uk help"hi.me.uk も対@応します
              輕觸搖晃的遊戲@ah.com も対応します@s.name)
 

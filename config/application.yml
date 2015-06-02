@@ -1,6 +1,6 @@
 defaults: &defaults
   # The server URL
-  server_url: "osm.dev"
+  server_url: "jva-karte.herokuapp.com"
   # The generator
   generator: "TaReTo Foo"
   copyright_owner: "TaReTo und Co"
