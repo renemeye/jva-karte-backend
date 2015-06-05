@@ -251,6 +251,7 @@ class UserController < ApplicationController
 
   def login
     #TaReTo Hack: deactivate user authentication
+    session[:referer] = params[:referer] if params[:referer]
     password_authentication("username", "password")
     # session[:referer] = params[:referer] if params[:referer]
     #
