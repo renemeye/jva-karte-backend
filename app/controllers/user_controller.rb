@@ -250,15 +250,17 @@ class UserController < ApplicationController
   end
 
   def login
-    session[:referer] = params[:referer] if params[:referer]
-
-    if params[:username].present? && params[:password].present?
-      session[:remember_me] ||= params[:remember_me]
-      password_authentication(params[:username], params[:password])
-    elsif params[:openid_url].present?
-      session[:remember_me] ||= params[:remember_me_openid]
-      redirect_to auth_url("openid", params[:openid_url])
-    end
+    #TaReTo Hack: deactivate user authentication
+    password_authentication("username", "password")
+    # session[:referer] = params[:referer] if params[:referer]
+    #
+    # if params[:username].present? && params[:password].present?
+    #   session[:remember_me] ||= params[:remember_me]
+    #   password_authentication(params[:username], params[:password])
+    # elsif params[:openid_url].present?
+    #   session[:remember_me] ||= params[:remember_me_openid]
+    #   redirect_to auth_url("openid", params[:openid_url])
+    # end
   end
 
   def logout
